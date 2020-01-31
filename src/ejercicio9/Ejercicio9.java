@@ -5,6 +5,8 @@
  */
 package ejercicio9;
 
+import java.util.Scanner;
+
 
 
 /**
@@ -19,7 +21,26 @@ public class Ejercicio9 {
     public static void main(String[] args) 
     {
         
+        Scanner ti = new Scanner (System.in);
+        Scanner td = new Scanner (System.in);
+        Scanner ts = new Scanner (System.in);
+
+        Alumno alu1 = new Alumno();
+
+        System.out.println("Nombre del alumno:");
+        String nombre = ts.nextLine();
+        alu1.setNombre(nombre);
+
+        try 
+        {    
+            alu1.pedirNotas();
+        } 
+        catch (RangoException error)     
+        {
+            System.out.println("Error.Posicion fuera de la lista.");
+        }
         
+        alu1.imprimirCalificaciones();
     }
     
 }
