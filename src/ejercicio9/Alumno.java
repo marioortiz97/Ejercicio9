@@ -5,6 +5,8 @@
  */
 package ejercicio9;
 
+import java.util.ArrayList;
+
 
 
 /**
@@ -13,6 +15,8 @@ package ejercicio9;
  */
 public class Alumno 
 {
-    
+    public static int num_asignaturas = 5;
+    private String nombre;
+    private ArrayList <Double> notas;
     
 }
