@@ -97,7 +97,7 @@ public class Alumno
      */
     public void imprimirCalificaciones()
     {
-        
-        System.out.println(notas);
+        System.out.println("Nombre del alumno: " + nombre);
+        System.out.println("Notas: " + notas);
     }
 }
