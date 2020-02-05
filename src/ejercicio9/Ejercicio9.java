@@ -35,10 +35,10 @@ public class Ejercicio9 {
         alu1.setNombre(nombre);
         boolean parar = false;
         
-        while (parar = false)
+        while (parar == false)
         {
             System.out.println("Opciones del alumno: " + alu1.getNombre());
-            System.out.println("1. Pedir notas \n 2. Modificar una nota (por posición) \n 3. Imprimir notas \n 4. Finalizar");
+            System.out.println("1. Pedir notas \n2. Modificar una nota (por posición) \n3. Imprimir notas \n4. Finalizar");
             int boton = ti.nextInt();
 
             switch (boton)
@@ -65,13 +65,21 @@ public class Ejercicio9 {
                     } 
                     catch (RangoException error) 
                     {
-                        System.out.println("Posicion seleccionada fuera del rango");
+                        System.out.println("Error. Nota fuera del rango.");
+                    }
+                    catch (java.lang.IndexOutOfBoundsException error)
+                    {
+                        System.out.println("Error. Posición fuera del rango");
                     }
                     break;
                 
                 case 3:
-                    
-
+                    alu1.imprimirCalificaciones();
+                    break;
+                case 4:
+                    System.out.println("Saliendo...");
+                    parar = true;
+                    break;
 
             } 
         }
@@ -80,7 +88,7 @@ public class Ejercicio9 {
         
         
         
-        alu1.imprimirCalificaciones();
+        
     }
     
 }
